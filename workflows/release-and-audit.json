@@ -1,0 +1,25 @@
+{
+  "id": "release-and-audit",
+  "name": "Audit and Release",
+  "description": "Perform independent evidence review, security scanning, provenance, signed artifacts and human approval",
+  "entry": "human-approved-scope",
+  "steps": [
+    "scope",
+    "inspect",
+    "validate-input",
+    "execute-permitted",
+    "verify-evidence",
+    "audit",
+    "report"
+  ],
+  "evidenceRequired": "release-readiness.md with verified/unverified statuses",
+  "security": "least-privilege; no device write by default",
+  "approvalRequiredFor": [
+    "model-download",
+    "remote-device-access",
+    "privileged-probing",
+    "conversion",
+    "deployment"
+  ],
+  "status": "documented; see docs/STATUS.md for implemented commands"
+}

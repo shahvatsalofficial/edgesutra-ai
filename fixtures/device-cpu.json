@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"fictional-arm64-prototype","os":"linux","architecture":"arm64","availableMemoryMB":256,"installedRuntimes":["toy-js"],"capabilitySource":"manually declared example, not probed hardware"}

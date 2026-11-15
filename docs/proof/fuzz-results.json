@@ -1,0 +1,6 @@
+{
+  "cases": 2000,
+  "rejectedCleanly": 2000,
+  "crashed": 0,
+  "note": "Mutated/truncated copies of fixtures/models/tiny.onnx. \"rejectedCleanly\" counts both accepted-as-parseable and thrown Error; \"crashed\" counts unexpected TypeError/RangeError. Deterministic seed 7. Not a substitute for a coverage-guided fuzzer."
+}

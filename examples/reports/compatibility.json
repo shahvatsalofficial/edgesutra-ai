@@ -1,0 +1,59 @@
+{
+  "schema": "edgesutra.evidence.v1",
+  "type": "compatibility",
+  "recordedAt": "2026-11-10T20:42:22.193Z",
+  "model": {
+    "sha256": "49108b19ddaad752f02522d53655f5597c9f20ec7422c272a939f1559b354f73",
+    "format": "onnx",
+    "operators": [
+      "Add",
+      "Relu"
+    ],
+    "opsets": [
+      {
+        "domain": "",
+        "version": 17
+      }
+    ]
+  },
+  "deviceId": "fixture-arm64-dev",
+  "runtime": "onnxruntime-cpu",
+  "capabilitySource": "user_supplied_fixture_not_official_conformance",
+  "checks": [
+    {
+      "check": "operator-allowlist",
+      "status": "static_match",
+      "reason": "All operators appear in supplied allowlist; actual execution still unverified"
+    },
+    {
+      "check": "onnx-opset",
+      "status": "static_match",
+      "observed": 17,
+      "range": [
+        11,
+        19
+      ]
+    },
+    {
+      "check": "ram-fit-estimate",
+      "status": "unknown",
+      "reason": "ONNX file bytes do not establish inference memory"
+    },
+    {
+      "check": "platform",
+      "status": "static_match",
+      "reason": "User-supplied declared platform only"
+    }
+  ],
+  "verdict": "STATIC_PLAUSIBLE_UNVERIFIED",
+  "liveInference": "not_run",
+  "evidenceTier": "static_only",
+  "modelProvenance": "49108b19ddaad752f02522d53655f5597c9f20ec7422c272a939f1559b354f73",
+  "claims": [
+    "No actual runtime compatibility, device latency or memory measurement is established"
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "cfdf205738820164d822517b611a86703386e30fcb92b2d0654f2c24eeaed78a"
+  }
+}

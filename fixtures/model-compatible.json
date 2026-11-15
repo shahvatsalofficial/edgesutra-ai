@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"toy-dense-model-v1","format":"toy-json","precision":"float32","operators":["MatMul","Add","Relu"],"requiredMemoryMB":64,"modelVersion":"1.0.0","source":"synthetic example"}

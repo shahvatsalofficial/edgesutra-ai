@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "kind": "conversion-plan",
+  "modelId": "toy-dense-model-v1",
+  "deviceId": "fictional-arm64-prototype",
+  "runtimeId": "toy-js",
+  "requestedPrecision": "int8",
+  "sourceManifestHash": "11af1dea3694fd1ebf295a39abb1891f5ff222a67a686a43810a6c95217dbded",
+  "targetManifestHash": "38a9ea95222106b2048ae47959e53ec8a605a2178464200b9d4217f96ee52f89",
+  "runtimeManifestHash": "6b5ecf938da0206b6a5a33d505a8cc173d295e5f447a7010f05bd74e21169a03",
+  "compatibilityStatus": "STATICALLY_COMPATIBLE",
+  "stages": [
+    {
+      "action": "validate-export",
+      "status": "PLANNED",
+      "description": "Inspect actual model graph with format-specific converter; manifest alone is insufficient"
+    },
+    {
+      "action": "calibration",
+      "status": "PLANNED",
+      "description": "Collect licensed representative input data with consent; record dataset version and distribution"
+    },
+    {
+      "action": "convert",
+      "status": "PLANNED",
+      "description": "Run supported conversion to int8 in an approved isolated toolchain"
+    },
+    {
+      "action": "correctness",
+      "status": "PLANNED",
+      "description": "Compare original/converted model outputs on held-out task-relevant examples"
+    },
+    {
+      "action": "target-device-benchmark",
+      "status": "PLANNED",
+      "description": "Measure warm/cold latency, memory, thermal and energy where sensors are available"
+    },
+    {
+      "action": "release-gate",
+      "status": "PLANNED",
+      "description": "Require verified accuracy, latency, memory, signed artifact provenance and human approval"
+    }
+  ],
+  "approvalRequired": true,
+  "conversionExecuted": false,
+  "noHardwareBenchmarks": true,
+  "limitations": "This is a planning artifact. No model conversion or device deployment has occurred.",
+  "integrity": "a7f25ca36e6bf90bb74c025c5734db54a4849f55313b64d5bff2cf5fb28bf00b"
+}

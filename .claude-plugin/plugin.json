@@ -1,0 +1,9 @@
+{
+  "name": "edgesutra",
+  "version": "0.2.0",
+  "description": "Evidence-first Edge AI engineering by Vatsal Shah",
+  "author": {
+    "name": "Vatsal Shah"
+  },
+  "license": "Apache-2.0"
+}

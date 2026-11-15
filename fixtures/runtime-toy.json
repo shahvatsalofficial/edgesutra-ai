@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"toy-js","formats":["toy-json"],"operators":["MatMul","Add","Relu"],"precisions":["float32","int8"],"architectures":["any"],"os":["linux","windows","darwin"],"capabilitySource":"demonstration manifest, not certified runtime"}

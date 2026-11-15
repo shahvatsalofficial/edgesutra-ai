@@ -1,0 +1,57 @@
+{
+  "schema": "edgesutra.evidence.v1",
+  "type": "run-comparison",
+  "recordedAt": "2026-11-10T20:42:22.268Z",
+  "baseline": {
+    "deviceId": "fixture-arm64-dev",
+    "modelSha256": "baseline-fixture-hash",
+    "runtime": "onnxruntime-cpu",
+    "workloadId": "image-classification-128",
+    "samples": {
+      "count": 7,
+      "p50Ms": 25,
+      "p95Ms": 28,
+      "minMs": 24,
+      "maxMs": 28
+    }
+  },
+  "candidate": {
+    "deviceId": "fixture-arm64-dev",
+    "modelSha256": "candidate-fixture-hash",
+    "runtime": "onnxruntime-cpu",
+    "workloadId": "image-classification-128",
+    "samples": {
+      "count": 7,
+      "p50Ms": 20,
+      "p95Ms": 22,
+      "minMs": 19,
+      "maxMs": 22
+    }
+  },
+  "workloadMatched": true,
+  "comparisonStatus": "COMPARABLE_REPORTED_MEASUREMENTS",
+  "reason": null,
+  "latencyP50ChangePercent": -20,
+  "quality": {
+    "baseline": {
+      "metric": "top1_accuracy",
+      "value": 0.92
+    },
+    "candidate": {
+      "metric": "top1_accuracy",
+      "value": 0.89
+    },
+    "change": -0.030000000000000027,
+    "status": "reported"
+  },
+  "energy": {
+    "status": "unknown",
+    "reason": "No physical energy meter data supplied"
+  },
+  "evidenceTier": "imported_measurements_not_executed_by_edgesutra",
+  "warning": "Input recordings are trusted only as far as their external provenance; no on-device execution occurred here",
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "5688481accadd05ef62d9742cb67093c1fbcde86bef5346563ce59022952b8f0"
+  }
+}

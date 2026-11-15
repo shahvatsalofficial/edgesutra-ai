@@ -1,0 +1,80 @@
+{
+  "name": "edgesutra-ai",
+  "version": "0.2.0",
+  "description": "EdgeSutra AI: evidence-first edge AI compatibility, quantization-planning and benchmark auditing CLI plus 20 portable agent skills for Claude Code, Cursor, Codex, Copilot and Gemini CLI. Keyless, offline, honest about what is NOT measured.",
+  "author": {
+    "name": "Vatsal Shah",
+    "url": "https://github.com/shahvatsalofficial"
+  },
+  "license": "Apache-2.0",
+  "private": false,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "edgesutra": "packages/cli/index.mjs",
+    "edgesutra-ai": "packages/cli/index.mjs"
+  },
+  "scripts": {
+    "test": "node scripts/run-tests.mjs",
+    "doctor": "node packages/cli/index.mjs doctor",
+    "demo": "node scripts/demo.mjs",
+    "audit": "node packages/cli/index.mjs audit --out examples/reports/audit",
+    "validate": "node packages/cli/index.mjs check --model fixtures/model-compatible.json --device fixtures/device-cpu.json --runtime fixtures/runtime-toy.json",
+    "pack:check": "npm pack --dry-run",
+    "proof": "node scripts/proof.mjs"
+  },
+  "homepage": "https://github.com/shahvatsalofficial/edgesutra-ai#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahvatsalofficial/edgesutra-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shahvatsalofficial/edgesutra-ai/issues"
+  },
+  "keywords": [
+    "edge-ai",
+    "on-device-ai",
+    "onnx",
+    "quantization",
+    "model-compatibility",
+    "benchmark",
+    "tinyml",
+    "agent-skills",
+    "claude-code",
+    "cursor",
+    "codex",
+    "github-copilot",
+    "gemini-cli",
+    "mcp",
+    "audit",
+    "evidence",
+    "llm",
+    "embedded"
+  ],
+  "files": [
+    "packages",
+    "skills",
+    "agents",
+    ".claude/agents",
+    "fixtures",
+    "schemas",
+    "rules",
+    "policies",
+    "workflows",
+    "templates",
+    "docs",
+    "examples",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "llms.txt"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

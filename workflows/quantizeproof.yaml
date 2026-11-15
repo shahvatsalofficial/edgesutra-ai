@@ -1,0 +1,9 @@
+name: quantizeproof
+status: plan_only
+steps:
+  - verify-license-and-baseline
+  - review-quantization-precision
+  - authorize-sandbox-and-toolchain
+  - convert-with-verified-runtime # not implemented
+  - run-matched-device-quality-and-latency-tests # not implemented
+  - audit-provenance-and-approve # not implemented

@@ -1,0 +1,22 @@
+{
+  "default": "deny",
+  "allowedOffline": [
+    "static_onnx_metadata",
+    "local_os_info",
+    "read_explicit_files",
+    "local_reports",
+    "project_local_skill_copy_with_user_request"
+  ],
+  "requiresApproval": [
+    "download_model",
+    "install_plugin",
+    "run_inference",
+    "run_conversion",
+    "external_network",
+    "remote_device",
+    "flash_firmware",
+    "deploy_device",
+    "paid_api",
+    "global_install"
+  ]
+}

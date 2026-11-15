@@ -1,0 +1,27 @@
+{
+  "schema": "edgesutra.evidence.v1",
+  "type": "model-inspection",
+  "recordedAt": "2026-11-10T20:42:22.154Z",
+  "sourceFile": "tiny.onnx",
+  "sha256": "49108b19ddaad752f02522d53655f5597c9f20ec7422c272a939f1559b354f73",
+  "format": "onnx",
+  "fileBytes": 23,
+  "operators": [
+    "Add",
+    "Relu"
+  ],
+  "nodeCount": 2,
+  "opsets": [
+    {
+      "domain": "",
+      "version": 17
+    }
+  ],
+  "inspection": "protobuf-metadata-only",
+  "runtimeExecution": "not_run",
+  "semanticValidation": "not_run",
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "8f5d84c23eefd60341769f599cddc84e468bf3de40c564b73dc02a48c294ed69"
+  }
+}

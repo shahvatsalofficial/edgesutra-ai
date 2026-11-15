@@ -1,0 +1,17 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+const command=['packages/cli/index.mjs'];const cli=(...args)=>spawnSync(process.execPath,[...command,...args],{encoding:'utf8',timeout:30000});
+test('doctor works offline',()=>{const r=cli('doctor');assert.equal(r.status,0);assert.equal(JSON.parse(r.stdout).noKey,true);});
+test('profile command returns host profile',()=>{const r=cli('profile');assert.equal(r.status,0);assert.equal(JSON.parse(r.stdout).kind,'host-profile');});
+test('validation CLI returns measured-static verdict',()=>{const r=cli('check','--model','fixtures/model-compatible.json','--device','fixtures/device-cpu.json','--runtime','fixtures/runtime-toy.json');assert.equal(r.status,0);assert.equal(JSON.parse(r.stdout).status,'STATICALLY_COMPATIBLE');});
+test('invalid required flag exits with error',()=>assert.equal(cli('check','--model','fixtures/model-compatible.json').status,2));
+test('invalid option syntax exits with error',()=>assert.equal(cli('benchmark','--runs').status,2));
+test('unknown command exits nonzero',()=>assert.equal(cli('bad').status,2));
+test('plan command does not claim conversion',()=>{const r=cli('plan','--model','fixtures/model-compatible.json','--device','fixtures/device-cpu.json','--runtime','fixtures/runtime-toy.json');assert.equal(r.status,0);assert.equal(JSON.parse(r.stdout).conversionExecuted,false);});
+test('benchmark command measures live toy execution',()=>{const r=cli('benchmark','--runs','2','--iterations','2','--inputs','3');assert.equal(r.status,0);assert.equal(JSON.parse(r.stdout).targetDevice.status,'NOT_TESTED');});
+test('verify CLI flags tampered report',()=>{const p=path.join(fs.mkdtempSync(path.join(os.tmpdir(),'edge-cli-')),'r.json');fs.writeFileSync(p,JSON.stringify({kind:'toy-benchmark',integrity:'0'.repeat(64)}));assert.equal(cli('verify','--input',p).status,2);});
+test('render refuses invalid report hash',()=>{const p=path.join(fs.mkdtempSync(path.join(os.tmpdir(),'edge-cli-')),'r.json');fs.writeFileSync(p,JSON.stringify({integrity:'0'.repeat(64)}));assert.equal(cli('render','--input',p,'--out',p+'.html').status,2);});

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/edgesutra/compatibility.schema.json",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "modelId",
+    "deviceId",
+    "runtimeId",
+    "status",
+    "checks",
+    "deviceExecution",
+    "integrity"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "kind": {
+      "const": "compatibility-report"
+    },
+    "modelId": {
+      "type": "string"
+    },
+    "deviceId": {
+      "type": "string"
+    },
+    "runtimeId": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "STATICALLY_COMPATIBLE",
+        "INCOMPATIBLE",
+        "REQUIRES_VERIFICATION"
+      ]
+    },
+    "checks": {
+      "type": "array"
+    },
+    "deviceExecution": {
+      "const": "NOT_RUN"
+    },
+    "integrity": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

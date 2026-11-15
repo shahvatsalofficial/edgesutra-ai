@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "project": "EdgeSutra AI",
+  "creator": "Vatsal Shah",
+  "roles": [
+    {
+      "id": "edgesutra-prime",
+      "name": "EdgeSutra Prime",
+      "scope": "Chief orchestration, architecture, scope, planning and human-controlled release decisions",
+      "skill": "skills/edgesutra-prime/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-prime.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-device-atlas",
+      "name": "Device Atlas",
+      "scope": "Inspect CPU, OS, memory, storage and published target-device constraints",
+      "skill": "skills/edgesutra-device-atlas/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-device-atlas.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-silicon-scout",
+      "name": "Silicon Scout",
+      "scope": "Assess GPU, NPU, DSP and accelerator driver visibility without presuming support",
+      "skill": "skills/edgesutra-silicon-scout/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-silicon-scout.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-runtime-bridge",
+      "name": "Runtime Bridge",
+      "scope": "Map ONNX Runtime, LiteRT, ExecuTorch, Core ML, OpenVINO and llama.cpp interfaces",
+      "skill": "skills/edgesutra-runtime-bridge/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-runtime-bridge.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-model-cartographer",
+      "name": "Model Cartographer",
+      "scope": "Inspect model file metadata, graphs, opsets, sizes and provenance",
+      "skill": "skills/edgesutra-model-cartographer/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-model-cartographer.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-operator-sentinel",
+      "name": "Operator Sentinel",
+      "scope": "Compare operator, datatype and opset requirements with runtime capabilities",
+      "skill": "skills/edgesutra-operator-sentinel/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-operator-sentinel.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-graph-surgeon",
+      "name": "Graph Surgeon",
+      "scope": "Plan supported graph transformations and operator substitutions with safety gates",
+      "skill": "skills/edgesutra-graph-surgeon/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-graph-surgeon.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-quantization-alchemist",
+      "name": "Quantization Alchemist",
+      "scope": "Plan post-training quantization and quantization-aware strategies",
+      "skill": "skills/edgesutra-quantization-alchemist/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-quantization-alchemist.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-calibration-steward",
+      "name": "Calibration Steward",
+      "scope": "Assess representative calibration data and privacy or bias constraints",
+      "skill": "skills/edgesutra-calibration-steward/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-calibration-steward.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-quality-witness",
+      "name": "Quality Witness",
+      "scope": "Measure model/task correctness and compare outputs after conversion",
+      "skill": "skills/edgesutra-quality-witness/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-quality-witness.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-latency-lab",
+      "name": "Latency Lab",
+      "scope": "Benchmark cold/warm inference latency, throughput, jitter and confidence",
+      "skill": "skills/edgesutra-latency-lab/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-latency-lab.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-memory-guardian",
+      "name": "Memory Guardian",
+      "scope": "Evaluate model footprint, RAM, peak residency and allocator limits",
+      "skill": "skills/edgesutra-memory-guardian/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-memory-guardian.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-energy-boundary",
+      "name": "Energy Boundary",
+      "scope": "Separate sensor-measured energy from estimates and unspecified quantities",
+      "skill": "skills/edgesutra-energy-boundary/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-energy-boundary.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-thermal-observer",
+      "name": "Thermal Observer",
+      "scope": "Plan thermal throttling, sustained-load and battery impact verification",
+      "skill": "skills/edgesutra-thermal-observer/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-thermal-observer.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-offline-guardian",
+      "name": "Offline Guardian",
+      "scope": "Audit offline readiness, remote network dependency and private data handling",
+      "skill": "skills/edgesutra-offline-guardian/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-offline-guardian.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-artifact-provenance",
+      "name": "Artifact Provenance",
+      "scope": "Track model weights, hashes, licenses, toolchains and signatures",
+      "skill": "skills/edgesutra-artifact-provenance/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-artifact-provenance.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-deployment-gate",
+      "name": "Deployment Gate",
+      "scope": "Check device release suitability and require explicit operator approvals",
+      "skill": "skills/edgesutra-deployment-gate/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-deployment-gate.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-ide-bridge",
+      "name": "IDE Bridge",
+      "scope": "Adapt canonical Agent Skills to supported IDE discovery paths",
+      "skill": "skills/edgesutra-ide-bridge/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-ide-bridge.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-security-sentinel",
+      "name": "Security Sentinel",
+      "scope": "Review model-file parsing, supply chain, sandbox and credentials",
+      "skill": "skills/edgesutra-security-sentinel/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-security-sentinel.md",
+      "status": "authored-instructions-not-tested-live"
+    },
+    {
+      "id": "edgesutra-release-auditor",
+      "name": "Release Auditor",
+      "scope": "Independent tests, traceability, reproducibility and truthful compatibility statuses",
+      "skill": "skills/edgesutra-release-auditor/SKILL.md",
+      "claudeAgent": ".claude/agents/edgesutra-release-auditor.md",
+      "status": "authored-instructions-not-tested-live"
+    }
+  ]
+}

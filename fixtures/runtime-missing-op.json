@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"toy-js-limited","formats":["toy-json"],"operators":["MatMul","Add"],"precisions":["float32"],"architectures":["arm64"],"os":["linux"]}

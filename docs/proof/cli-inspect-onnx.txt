@@ -1,0 +1,27 @@
+$ edgesutra inspect --input fixtures/models/tiny.onnx
+(exit 0)
+
+{
+  "schemaVersion": 1,
+  "kind": "model-inspection",
+  "id": "tiny.onnx",
+  "sourceFile": "tiny.onnx",
+  "sha256": "49108b19ddaad752f02522d53655f5597c9f20ec7422c272a939f1559b354f73",
+  "format": "onnx",
+  "fileBytes": 23,
+  "operators": [
+    "Add",
+    "Relu"
+  ],
+  "nodeCount": 2,
+  "opsets": [
+    {
+      "domain": "",
+      "version": 17
+    }
+  ],
+  "inspection": "protobuf-metadata-only",
+  "runtimeExecution": "not_run",
+  "semanticValidation": "not_run",
+  "integrity": "2cbddc28ec3125f1cbdb70fb7c89232e3b802dea245abacf979da13555875845"
+}

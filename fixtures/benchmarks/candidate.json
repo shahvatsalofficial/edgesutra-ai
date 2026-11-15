@@ -1,0 +1,22 @@
+{
+  "source": "synthetic_fixture_not_measured",
+  "deviceId": "fixture-arm64-dev",
+  "runtime": "onnxruntime-cpu",
+  "modelSha256": "candidate-fixture-hash",
+  "workloadId": "image-classification-128",
+  "inputHash": "fixture-input-01",
+  "latencyMs": [
+    19,
+    21,
+    20,
+    20,
+    22,
+    19,
+    21
+  ],
+  "quality": {
+    "metric": "top1_accuracy",
+    "value": 0.89
+  },
+  "memoryPeakBytes": 130000000
+}

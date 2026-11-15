@@ -1,0 +1,25 @@
+{
+  "id": "edge-target-validation",
+  "name": "Real Target Device Validation",
+  "description": "After explicit consent: discover device, run official runtime model, measure latency/memory/quality with device metadata",
+  "entry": "human-approved-scope",
+  "steps": [
+    "scope",
+    "inspect",
+    "validate-input",
+    "execute-permitted",
+    "verify-evidence",
+    "audit",
+    "report"
+  ],
+  "evidenceRequired": "verified device-specific evidence (future)",
+  "security": "least-privilege; no device write by default",
+  "approvalRequiredFor": [
+    "model-download",
+    "remote-device-access",
+    "privileged-probing",
+    "conversion",
+    "deployment"
+  ],
+  "status": "documented; see docs/STATUS.md for implemented commands"
+}

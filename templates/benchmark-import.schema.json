@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EdgeSutra imported measurement",
+  "type": "object",
+  "required": [
+    "deviceId",
+    "runtime",
+    "modelSha256",
+    "workloadId",
+    "latencyMs"
+  ],
+  "properties": {
+    "deviceId": {
+      "type": "string"
+    },
+    "runtime": {
+      "type": "string"
+    },
+    "modelSha256": {
+      "type": "string"
+    },
+    "workloadId": {
+      "type": "string"
+    },
+    "inputHash": {
+      "type": "string"
+    },
+    "latencyMs": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0
+      }
+    },
+    "quality": {
+      "type": "object"
+    }
+  }
+}

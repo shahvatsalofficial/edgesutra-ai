@@ -1,0 +1,9 @@
+name: edgefit
+status: working_static_core
+steps:
+  - device-profile
+  - bounded-onnx-metadata
+  - supplied-operator-allowlist
+  - static-compatibility
+  - evidence-report
+releaseGate: static_matches_are_not_runtime_proof

@@ -1,0 +1,10 @@
+name: device-smoke
+status: planned_not_implemented
+requires: explicit_human_device_permission
+steps:
+  - validate-hardware-identity
+  - verify-operator-compatibility
+  - execute-authorized-inference
+  - measure-warm-and-cold-inference
+  - check-quality-and-power
+  - save-repro-capsule

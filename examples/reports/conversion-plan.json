@@ -1,0 +1,56 @@
+{
+  "schema": "edgesutra.evidence.v1",
+  "type": "conversion-plan",
+  "recordedAt": "2026-11-10T20:42:22.231Z",
+  "modelSha256": "49108b19ddaad752f02522d53655f5597c9f20ec7422c272a939f1559b354f73",
+  "sourceFormat": "onnx",
+  "targetDevice": "fixture-arm64-dev",
+  "targetPrecision": "int8",
+  "mode": "proposal_only",
+  "steps": [
+    {
+      "step": 1,
+      "action": "Verify model license, input/output shapes and sample inference quality",
+      "status": "not_run"
+    },
+    {
+      "step": 2,
+      "action": "Choose an official runtime and check supported operators, opsets and delegates",
+      "status": "not_run"
+    },
+    {
+      "step": 3,
+      "action": "Create a reviewed int8 export/quantization recipe using a version-pinned toolchain",
+      "status": "not_run"
+    },
+    {
+      "step": 4,
+      "action": "Use representative calibration data when appropriate and record dataset provenance",
+      "status": "not_run"
+    },
+    {
+      "step": 5,
+      "action": "Run baseline and candidate on the same actual hardware with matched inputs",
+      "status": "not_run"
+    },
+    {
+      "step": 6,
+      "action": "Compare task quality and p50/p95 latency separately; record peak RAM/power if instrumented",
+      "status": "not_run"
+    },
+    {
+      "step": 7,
+      "action": "Prepare signed artifact and human-approved rollback/deployment strategy",
+      "status": "not_run"
+    }
+  ],
+  "riskNotes": [
+    "INT4/INT8 are not universally supported by all backends",
+    "Estimated disk reduction does not prove runtime RAM savings",
+    "No transformation is executed by this plan"
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "8be16191c4749a6fd7b54a4b46911bf92c8856dfcbe711aea2504058bbd64f27"
+  }
+}

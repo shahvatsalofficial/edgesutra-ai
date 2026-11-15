@@ -1,0 +1,25 @@
+{
+  "id": "hardware-profile",
+  "name": "Device Profile Workflow",
+  "description": "Inspect local host and approved target manifests; distinguish observed host data from user-declared device capabilities",
+  "entry": "human-approved-scope",
+  "steps": [
+    "scope",
+    "inspect",
+    "validate-input",
+    "execute-permitted",
+    "verify-evidence",
+    "audit",
+    "report"
+  ],
+  "evidenceRequired": "device-profile.json and unprobed fields",
+  "security": "least-privilege; no device write by default",
+  "approvalRequiredFor": [
+    "model-download",
+    "remote-device-access",
+    "privileged-probing",
+    "conversion",
+    "deployment"
+  ],
+  "status": "documented; see docs/STATUS.md for implemented commands"
+}

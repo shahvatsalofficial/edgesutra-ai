@@ -1,0 +1,25 @@
+{
+  "id": "quality-gate",
+  "name": "Quality & Regression Gate",
+  "description": "Compare equivalent workloads, compute task output differences, reject unknown quality metrics",
+  "entry": "human-approved-scope",
+  "steps": [
+    "scope",
+    "inspect",
+    "validate-input",
+    "execute-permitted",
+    "verify-evidence",
+    "audit",
+    "report"
+  ],
+  "evidenceRequired": "comparison.json and regression verdict",
+  "security": "least-privilege; no device write by default",
+  "approvalRequiredFor": [
+    "model-download",
+    "remote-device-access",
+    "privileged-probing",
+    "conversion",
+    "deployment"
+  ],
+  "status": "documented; see docs/STATUS.md for implemented commands"
+}

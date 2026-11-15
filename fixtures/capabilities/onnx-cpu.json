@@ -1,0 +1,20 @@
+{
+  "runtime": "onnxruntime-cpu",
+  "source": "user_supplied_fixture_not_official_conformance",
+  "operators": [
+    "Add",
+    "Relu",
+    "Mul",
+    "Gemm"
+  ],
+  "onnxOpsetRange": [
+    11,
+    19
+  ],
+  "targetPlatforms": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
+  "notes": "Illustrative operator allowlist only; not a guarantee of model compatibility"
+}

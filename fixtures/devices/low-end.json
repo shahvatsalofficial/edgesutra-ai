@@ -1,0 +1,19 @@
+{
+  "deviceId": "fixture-arm64-dev",
+  "platform": "linux",
+  "arch": "arm64",
+  "source": "synthetic_fixture",
+  "memory": {
+    "totalBytes": 2147483648,
+    "freeBytes": 1048576000
+  },
+  "cpu": {
+    "model": "simulated ARM CPU"
+  },
+  "gpu": {
+    "status": "unknown"
+  },
+  "npu": {
+    "status": "unknown"
+  }
+}

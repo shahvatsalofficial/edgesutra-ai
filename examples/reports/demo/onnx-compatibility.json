@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "kind": "compatibility-report",
+  "modelId": "tiny.onnx",
+  "deviceId": "fictional-arm64-prototype",
+  "runtimeId": "onnx-cpu-declared",
+  "status": "REQUIRES_VERIFICATION",
+  "checks": [
+    {
+      "name": "model-format",
+      "result": "pass",
+      "detail": "Model onnx; runtime onnx"
+    },
+    {
+      "name": "operators",
+      "result": "pass",
+      "detail": "All declared operators listed by runtime"
+    },
+    {
+      "name": "precision",
+      "result": "pass",
+      "detail": "Model float32; runtime float32"
+    },
+    {
+      "name": "memory-estimate",
+      "result": "unknown",
+      "detail": "No declared model memory requirement"
+    },
+    {
+      "name": "architecture",
+      "result": "pass",
+      "detail": "Target arm64; runtime arm64, x64"
+    },
+    {
+      "name": "os",
+      "result": "pass",
+      "detail": "Target linux; runtime linux, darwin, win32"
+    },
+    {
+      "name": "runtime-present",
+      "result": "unknown",
+      "detail": "Installation not verified on target"
+    },
+    {
+      "name": "real-device-execution",
+      "result": "unknown",
+      "detail": "No model execution or performance measurement on this target has occurred"
+    }
+  ],
+  "deviceExecution": "NOT_RUN",
+  "explanation": "Static manifest-based checks only. Does not parse ONNX graph or certify an actual edge device.",
+  "integrity": "129bd939d0c29ca556dc2c8a229028da9921ce5cb548a62216a3895717446341"
+}

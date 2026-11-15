@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"onnx-unverified-model","format":"onnx","precision":"float16","operators":["CustomAttention","MatMul"],"requiredMemoryMB":1024,"source":"fixture claim, not parsed from real ONNX graph"}

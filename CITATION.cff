@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use EdgeSutra AI, please cite it as below."
+title: "EdgeSutra AI"
+abstract: "Evidence-first edge AI compatibility, quantization-planning and benchmark-auditing toolkit with portable agent skills."
+type: software
+authors:
+  - family-names: Shah
+    given-names: Vatsal
+version: 0.2.0
+date-released: 2026-11-16
+license: Apache-2.0
+repository-code: "https://github.com/shahvatsalofficial/edgesutra-ai"
+keywords: [edge-ai, on-device-ai, onnx, quantization, benchmark, agent-skills]

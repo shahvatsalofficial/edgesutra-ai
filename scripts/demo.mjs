@@ -1,0 +1,18 @@
+import path from 'node:path';
+import fs from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import {readJson,writeJson} from '../packages/core/util.mjs';
+import {profileHost} from '../packages/core/profile.mjs';
+import {checkCompatibility} from '../packages/core/compat.mjs';
+import {makePlan} from '../packages/core/plan.mjs';
+import {benchmarkToy} from '../packages/core/benchmark.mjs';
+import {inspectOnnx} from '../packages/core/onnx.mjs';
+import {markdownReport,htmlReport} from '../packages/reporting/report.mjs';
+const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),dir=path.join(ROOT,'examples/reports/demo');fs.mkdirSync(dir,{recursive:true});
+const model=readJson(path.join(ROOT,'fixtures/model-compatible.json')),device=readJson(path.join(ROOT,'fixtures/device-cpu.json')),runtime=readJson(path.join(ROOT,'fixtures/runtime-toy.json'));
+const info=profileHost(),compat=checkCompatibility(model,device,runtime),plan=makePlan(model,device,runtime,compat),bench=benchmarkToy({runs:5,iterations:80});
+const inspected=await inspectOnnx(path.join(ROOT,'fixtures/models/tiny.onnx'));
+const onnxCompat=checkCompatibility(inspected,device,readJson(path.join(ROOT,'fixtures/runtime-onnx-cpu.json')));
+for(const [file,obj] of Object.entries({'host-profile.json':info,'compatibility.json':compat,'conversion-plan.json':plan,'benchmark-results.json':bench,'onnx-inspection.json':inspected,'onnx-compatibility.json':onnxCompat}))writeJson(path.join(dir,file),obj);
+fs.writeFileSync(path.join(dir,'edge-readiness.md'),markdownReport(compat)+'\n'+markdownReport(bench));fs.writeFileSync(path.join(dir,'benchmark-report.html'),htmlReport(bench));
+console.log(JSON.stringify({status:'demo-completed',reportDirectory:dir,hostBenchmark:bench.status,compatibility:compat.status,targetExecution:compat.deviceExecution,measurementSamples:bench.runs,onnxMetadataOperators:inspected.operators,onnxStaticCheck:onnxCompat.status,realDeviceTested:false},null,2));
