@@ -22,13 +22,7 @@ jobs:
         run: test "v$(node -p "require('./package.json').version")" = "${GITHUB_REF_NAME}"
       - name: Pack
         run: npm pack
-      - name: Publish to npm (skipped until the NPM_TOKEN secret exists)
-        if: env.NODE_AUTH_TOKEN != ''
+      - name: Use npm with trusted-publishing (OIDC) support
+        run: npm install -g npm@latest
+      - name: Publish to npm (trusted publishing, no token)
         run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Note when npm publish was skipped
-        if: env.NODE_AUTH_TOKEN == ''
-        run: echo "NPM_TOKEN not set; npm publish skipped. Publish locally with npm publish."
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
