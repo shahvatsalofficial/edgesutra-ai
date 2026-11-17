@@ -27,7 +27,7 @@ _Static manifest-based checks only. Does not parse ONNX graph or certify an actu
 **Creator:** Vatsal Shah  
 **Status:** HOST_ONLY_TEST  
 **Integrity:** verified (SHA-256 recomputed)  
-**Recorded:** 2026-11-15T19:02:13.171Z  
+**Recorded:** 2026-11-17T17:16:15.916Z  
 
 **Actual execution location:** host-a4e38df95a-win32-x64  
 **Target device:** NOT_TESTED  
@@ -36,8 +36,8 @@ _Static manifest-based checks only. Does not parse ONNX graph or certify an actu
 
 | Variant | Median wall-clock (ms) | p95 (ms) |
 |---|---|---|
-| float32 | 0.6332 | 0.8096 |
-| int8-sim | 0.6084 | 0.7123 |
+| float32 | 2.5249 | 4.1847 |
+| int8-sim | 2.2635 | 2.3678 |
 
 **Quality MAE:** 0.00023884  
 **Max abs error:** 0.0017877  

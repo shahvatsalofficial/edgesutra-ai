@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "kind": "audit-report",
+  "tool": "EdgeSutra AI",
+  "toolVersion": "0.2.1",
+  "status": "REVIEW_REQUIRED",
+  "recordedAt": "2026-11-17T17:16:25.810Z",
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "win32",
+    "architecture": "x64"
+  },
+  "subject": {
+    "modelId": "toy-dense-model-v1",
+    "deviceId": "fictional-arm64-prototype",
+    "runtimeId": "toy-js",
+    "modelSha256": null,
+    "inputs": "bundled-synthetic-fixtures"
+  },
+  "compatibilityStatus": "STATICALLY_COMPATIBLE",
+  "verdict": "REVIEW_REQUIRED",
+  "verdictRule": "BLOCKED on any failed static check; REVIEW_REQUIRED otherwise; GO_CANDIDATE needs verified on-device evidence plus human sign-off, which this tool cannot produce.",
+  "findings": [
+    {
+      "id": "ES-UNKNOWN-REAL-DEVICE-EXECUTION",
+      "severity": "review",
+      "title": "Unverified: real-device-execution",
+      "detail": "No model execution or performance measurement on this target has occurred"
+    },
+    {
+      "id": "ES-NOT-RUN-DEVICE",
+      "severity": "review",
+      "title": "No target-device execution",
+      "detail": "No model was executed on the target device. Static manifest checks and a host-only toy benchmark do not prove device support."
+    },
+    {
+      "id": "ES-NOT-MEASURED-ENERGY",
+      "severity": "info",
+      "title": "Energy, carbon and peak memory not measured",
+      "detail": "Reported as NOT_MEASURED; never estimated or substituted."
+    },
+    {
+      "id": "ES-SYNTHETIC-INPUT",
+      "severity": "info",
+      "title": "Bundled synthetic fixtures used",
+      "detail": "Manifests are declared claims, not observations."
+    }
+  ],
+  "evidence": [
+    {
+      "artifact": "compatibility.json",
+      "tier": "STATIC_MATCH",
+      "proves": "Declared model/runtime/device contracts agree or disagree",
+      "doesNotProve": "That the model runs on the device"
+    },
+    {
+      "artifact": "benchmark-results.json",
+      "tier": "MEASURED_HOST_ONLY",
+      "proves": "A toy Node.js model ran on this host CPU with timed samples",
+      "doesNotProve": "Target-device latency, energy, peak memory or edge-runtime behavior"
+    },
+    {
+      "artifact": "conversion-plan.json",
+      "tier": "NOT_RUN",
+      "proves": "A reviewable plan exists",
+      "doesNotProve": "That any conversion was executed"
+    }
+  ],
+  "notTested": [
+    "Physical or virtual target-device inference",
+    "ONNX Runtime / LiteRT / ExecuTorch execution",
+    "Quantized-model task quality on held-out data",
+    "Energy, thermal and battery behavior",
+    "Offline reliability under interruption",
+    "Package signing and provenance beyond SHA-256"
+  ],
+  "artifacts": {
+    "host-profile.json": {
+      "sha256": "82255e3590789bb5161a2d840b5e2115bf5c7cdca681a1ced46e346f0b61b971",
+      "integrity": "f415045ed2ac81b5be3f3a4260e208683e82ac220798c6063706ebd569d490b6"
+    },
+    "compatibility.json": {
+      "sha256": "2a4bb2c9baf1708af3f9adbbc33b9e0b5da35a820c3f1be2688df8b5b8d2b3a5",
+      "integrity": "d4da6f0546f78b373837db320167c6d47badbc2c214c7bba9134593eefb7a803"
+    },
+    "conversion-plan.json": {
+      "sha256": "32882eb2c46c05c1db7e849ebaad18babea1bec519d8507ce87b81e5292ef8c9",
+      "integrity": "a7f25ca36e6bf90bb74c025c5734db54a4849f55313b64d5bff2cf5fb28bf00b"
+    },
+    "benchmark-results.json": {
+      "sha256": "88b10c6568bf0ce6aba8d343004ef76dedda6c10fabeeb6574903e0dac4fef94",
+      "integrity": "1a6162f549b8d0741523aba255c1f42ec1fce3f06ed028156b01867d9654352c"
+    }
+  },
+  "humanApprovalRequired": true,
+  "integrity": "a1dcdb67220b304572eb9c97fe79e8484a68317f6a1d8b320d5c1492b00c61ba"
+}

@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.1 — 2026-11-17
+
+### Added
+- Documentation site on GitHub Pages: <https://shahvatsalofficial.github.io/edgesutra-ai/> (`documents/`, built by `npm run docs`, deployed by `pages.yml`). Includes canonical/Open Graph metadata and JSON-LD for search and LLM discovery.
+
+### Changed
+- Minimum Node.js is now 22 (Node 20 is end-of-life). CI matrix: Linux 22/24, Windows 22/24, macOS 24.
+- All GitHub Actions upgraded to current majors and pinned by commit SHA (checkout v7.0.1, setup-node v7.1.0, upload-artifact v7.0.2, Pages actions v6/v5).
+- Release workflow publishes through npm trusted publishing (OIDC) with provenance; no stored token.
+
 ## 0.2.0 — 2026-11-16
 
 First public release.

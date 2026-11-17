@@ -5,8 +5,9 @@ An evidence-first edge-AI compatibility, quantization-planning and benchmark-aud
 
 [![CI](https://github.com/shahvatsalofficial/edgesutra-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/shahvatsalofficial/edgesutra-ai/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/edgesutra-ai)](https://www.npmjs.com/package/edgesutra-ai)
+[![Docs](https://img.shields.io/badge/docs-github.io-0b6a7a)](https://shahvatsalofficial.github.io/edgesutra-ai/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
-![Node](https://img.shields.io/badge/node-%3E%3D20-green)
+![Node](https://img.shields.io/badge/node-%3E%3D22-green)
 ![Dependencies](https://img.shields.io/badge/runtime%20dependencies-0-brightgreen)
 
 > **Honest scope.** EdgeSutra is **not** an inference framework and does **not** run models on edge hardware today. It tells you what is *measured*, what is only *declared*, and what is *unknown* — and refuses to blur them. See [What is and is not proven](#what-is-and-is-not-proven).
@@ -22,7 +23,7 @@ Exporting or quantizing a model is easy. Proving it runs well on a *specific* de
 
 The output is a reviewable **audit report** (Markdown + HTML + JSON) with a default-deny verdict: `BLOCKED` or `REVIEW_REQUIRED`. `GO_CANDIDATE` is never emitted without verified on-device evidence and human sign-off.
 
-## Quick start (2 minutes, Node.js 20+, no API key, no network)
+## Quick start (2 minutes, Node.js 22+, no API key, no network)
 
 ```bash
 npx edgesutra-ai audit --out ./edge-audit
@@ -64,6 +65,10 @@ Exit codes: `0` ok · `1` blocked/incompatible · `2` invalid input or tool erro
 | SHA-256 report integrity | Detects corruption. It is **not** a signature and proves nothing about origin |
 
 Full detail: [docs/STATUS.md](docs/STATUS.md) · [Evidence model](docs/EVIDENCE_MODEL.md) · [Audit reports](docs/AUDIT_REPORTS.md).
+
+## Documentation
+
+Full documentation site (executive, functional, architecture, technical, user guide, security, evidence, test report, legal, roadmap): **<https://shahvatsalofficial.github.io/edgesutra-ai/>**
 
 ## Trust, proof and legal
 

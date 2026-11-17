@@ -6,8 +6,8 @@ type: software
 authors:
   - family-names: Shah
     given-names: Vatsal
-version: 0.2.0
-date-released: 2026-11-16
+version: 0.2.1
+date-released: 2026-11-17
 license: Apache-2.0
 repository-code: "https://github.com/shahvatsalofficial/edgesutra-ai"
 keywords: [edge-ai, on-device-ai, onnx, quantization, benchmark, agent-skills]

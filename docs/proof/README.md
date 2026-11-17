@@ -4,9 +4,9 @@ Regenerate: `npm run proof`. These files are machine output, not hand-written.
 
 | Field | Value |
 |---|---|
-| Tool | edgesutra-ai 0.2.0 |
+| Tool | edgesutra-ai 0.2.1 |
 | Node / platform | v24.15.0 · win32/x64 |
-| Recorded | 2026-11-15T19:09:20.268Z |
+| Recorded | 2026-11-17T17:16:57.611Z |
 | Tests | 86 |
 | Passed | 82 |
 | Failed | 0 |

@@ -1,0 +1,22 @@
+$ edgesutra doctor
+(exit 0)
+
+{
+  "tool": "EdgeSutra AI",
+  "version": "0.2.1",
+  "runtime": "v24.15.0",
+  "capabilities": [
+    "host-profile",
+    "manifest-compatibility",
+    "conversion-plan",
+    "toy-cpu-benchmark",
+    "bench-compare",
+    "audit-md-html",
+    "report",
+    "localhost-server",
+    "skill-install"
+  ],
+  "noKey": true,
+  "verifiedIdeActivation": false,
+  "nativeOnnxRuntime": false
+}
