@@ -1,0 +1,56 @@
+$ edgesutra check --model fixtures/model-unsupported.json --device fixtures/device-cpu.json --runtime fixtures/runtime-toy.json
+(exit 1)
+
+{
+  "schemaVersion": 1,
+  "kind": "compatibility-report",
+  "modelId": "onnx-unverified-model",
+  "deviceId": "fictional-arm64-prototype",
+  "runtimeId": "toy-js",
+  "status": "INCOMPATIBLE",
+  "checks": [
+    {
+      "name": "model-format",
+      "result": "fail",
+      "detail": "Model onnx; runtime toy-json"
+    },
+    {
+      "name": "operators",
+      "result": "fail",
+      "detail": "Missing declared ops: CustomAttention"
+    },
+    {
+      "name": "precision",
+      "result": "fail",
+      "detail": "Model float16; runtime float32, int8"
+    },
+    {
+      "name": "memory-estimate",
+      "result": "fail",
+      "detail": "Declared 1024 MB; available 256 MB"
+    },
+    {
+      "name": "architecture",
+      "result": "pass",
+      "detail": "Target arm64; runtime any"
+    },
+    {
+      "name": "os",
+      "result": "pass",
+      "detail": "Target linux; runtime linux, windows, darwin"
+    },
+    {
+      "name": "runtime-present",
+      "result": "pass",
+      "detail": "Target manifest claims runtime installed; not executed"
+    },
+    {
+      "name": "real-device-execution",
+      "result": "unknown",
+      "detail": "No model execution or performance measurement on this target has occurred"
+    }
+  ],
+  "deviceExecution": "NOT_RUN",
+  "explanation": "Static manifest-based checks only. Does not parse ONNX graph or certify an actual edge device.",
+  "integrity": "950ec4e23849e2bb48fb3e1b76af83a48a120d302560f4a9a13901d85eedb2b5"
+}

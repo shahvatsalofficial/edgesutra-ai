@@ -1,6 +1,6 @@
 {
   "name": "edgesutra-ai",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "EdgeSutra AI: evidence-first edge AI compatibility, quantization-planning and benchmark auditing CLI plus 20 portable agent skills for Claude Code, Cursor, Codex, Copilot and Gemini CLI. Keyless, offline, honest about what is NOT measured.",
   "author": {
     "name": "Vatsal Shah",
@@ -24,7 +24,7 @@
     "validate": "node packages/cli/index.mjs check --model fixtures/model-compatible.json --device fixtures/device-cpu.json --runtime fixtures/runtime-toy.json",
     "pack:check": "npm pack --dry-run",
     "proof": "node scripts/proof.mjs",
-    "docs": "node scripts/build-docs.mjs"
+    "docs": "node documents/build.mjs"
   },
   "homepage": "https://shahvatsalofficial.github.io/edgesutra-ai/",
   "repository": {
@@ -72,8 +72,7 @@
     "NOTICE",
     "CHANGELOG.md",
     "SECURITY.md",
-    "llms.txt",
-    "documents"
+    "llms.txt"
   ],
   "publishConfig": {
     "access": "public",

@@ -4,11 +4,11 @@ Regenerate: `npm run proof`. These files are machine output, not hand-written.
 
 | Field | Value |
 |---|---|
-| Tool | edgesutra-ai 0.2.1 |
+| Tool | edgesutra-ai 0.2.2 |
 | Node / platform | v24.15.0 · win32/x64 |
-| Recorded | 2026-11-17T17:16:57.611Z |
-| Tests | 86 |
-| Passed | 82 |
+| Recorded | 2026-11-24T19:49:04.587Z |
+| Tests | 90 |
+| Passed | 86 |
 | Failed | 0 |
 | Skipped | 4 (symlink tests skip on hosts that forbid symlinks; they execute on Linux/macOS CI) |
 | Parser fuzz | 2000 mutated inputs, 0 unexpected crashes |

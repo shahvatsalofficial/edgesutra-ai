@@ -9,7 +9,7 @@
     "cpuModel": "Intel(R) Core(TM) Ultra 7 155U",
     "logicalCores": 14,
     "totalMemoryBytes": 33767481344,
-    "freeMemoryBytes": 898236416,
+    "freeMemoryBytes": 1027964928,
     "nodeVersion": "v24.15.0"
   },
   "accelerators": {
@@ -24,5 +24,5 @@
     "status": "not-measured"
   },
   "note": "Host hardware detected only; this does NOT establish the capabilities of an attached or remote target device.",
-  "integrity": "f415045ed2ac81b5be3f3a4260e208683e82ac220798c6063706ebd569d490b6"
+  "integrity": "c1650c93f612225424f2a33d5916c07066800f07dd98b42ee053bc78bdc29ae1"
 }

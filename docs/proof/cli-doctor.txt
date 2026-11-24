@@ -3,7 +3,7 @@ $ edgesutra doctor
 
 {
   "tool": "EdgeSutra AI",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "runtime": "v24.15.0",
   "capabilities": [
     "host-profile",

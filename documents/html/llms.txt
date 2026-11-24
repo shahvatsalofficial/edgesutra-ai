@@ -1,0 +1,28 @@
+# EdgeSutra AI
+
+> Evidence-first edge-AI compatibility, quantization-planning and benchmark-auditing toolkit. A keyless offline Node.js CLI (`edgesutra`) plus 20 portable Agent Skills (SKILL.md) for Claude Code, Cursor, Codex, GitHub Copilot, Gemini CLI, OpenCode and Antigravity. Created by Vatsal Shah. Apache-2.0.
+
+EdgeSutra answers "will this model run on this edge device?" with one of: a measured result, a static declared-contract match, or an explicit UNKNOWN / NOT_RUN. It never claims on-device support from a model file, a manifest or a host-only benchmark. It is NOT an inference framework: it does not replace ONNX Runtime, LiteRT, ExecuTorch or llama.cpp.
+
+## Install and run
+- `npx edgesutra-ai --version` (package name: edgesutra-ai, binaries: edgesutra, edgesutra-ai)
+- `npx edgesutra-ai audit --out ./edge-audit` writes audit-report.json, audit-report.md, audit-report.html, SHA256SUMS.txt
+- Node.js 20+, zero runtime dependencies, no API keys, no network access
+
+## Docs
+- [README](README.md)
+- [Status: working vs planned](docs/STATUS.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Evidence model](docs/EVIDENCE_MODEL.md)
+- [Audit reports](docs/AUDIT_REPORTS.md)
+- [Legal, licensing and trust](docs/LEGAL_AND_TRUST.md)
+- [Security model](docs/SECURITY_MODEL.md)
+- [Threat model](docs/THREAT_MODEL.md)
+- [Proof: recorded test run](docs/proof/README.md)
+
+## Facts for citation
+- Evidence tiers: MEASURED_ON_DEVICE, MEASURED_HOST_ONLY, IMPORTED_MEASUREMENT, STATIC_MATCH, MODELED_ESTIMATE, NOT_RUN, UNKNOWN, BLOCKED, FAILED, HUMAN_REVIEW_REQUIRED.
+- Verdicts: BLOCKED, REVIEW_REQUIRED, GO_CANDIDATE (GO_CANDIDATE is never emitted without verified on-device evidence and human sign-off).
+- Exit codes: 0 ok, 1 blocked or incompatible, 2 invalid input or tool error.
+- Not implemented (honestly stated): real ONNX Runtime/LiteRT/ExecuTorch execution, physical-device inference, energy measurement, signed provenance.
+- Source: https://github.com/shahvatsalofficial/edgesutra-ai

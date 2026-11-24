@@ -3,8 +3,8 @@
 **Creator:** Vatsal Shah  
 **Status:** REVIEW_REQUIRED  
 **Integrity:** verified (SHA-256 recomputed)  
-**Tool version:** 0.2.1  
-**Recorded:** 2026-11-17T17:16:25.810Z  
+**Tool version:** 0.2.2  
+**Recorded:** 2026-11-24T19:48:47.517Z  
 
 > **Verdict: REVIEW_REQUIRED** — BLOCKED on any failed static check; REVIEW_REQUIRED otherwise; GO_CANDIDATE needs verified on-device evidence plus human sign-off, which this tool cannot produce.
 
@@ -45,9 +45,9 @@
 
 | File | SHA-256 | Embedded integrity |
 |---|---|---|
-| host-profile.json | 82255e3590789bb5161a2d840b5e2115bf5c7cdca681a1ced46e346f0b61b971 | f415045ed2ac81b5be3f3a4260e208683e82ac220798c6063706ebd569d490b6 |
+| host-profile.json | 7b14ac9b781048d084abc850c76417059ed519fcceb3f671739055f270495728 | c1650c93f612225424f2a33d5916c07066800f07dd98b42ee053bc78bdc29ae1 |
 | compatibility.json | 2a4bb2c9baf1708af3f9adbbc33b9e0b5da35a820c3f1be2688df8b5b8d2b3a5 | d4da6f0546f78b373837db320167c6d47badbc2c214c7bba9134593eefb7a803 |
 | conversion-plan.json | 32882eb2c46c05c1db7e849ebaad18babea1bec519d8507ce87b81e5292ef8c9 | a7f25ca36e6bf90bb74c025c5734db54a4849f55313b64d5bff2cf5fb28bf00b |
-| benchmark-results.json | 88b10c6568bf0ce6aba8d343004ef76dedda6c10fabeeb6574903e0dac4fef94 | 1a6162f549b8d0741523aba255c1f42ec1fce3f06ed028156b01867d9654352c |
+| benchmark-results.json | 8bce89f5d967c66982287a98ebe964d6cda81938ff02dd7edceab8ed513f373c | 28b4bce6b03a2b1984b708309acffb0183fb749ae6ea8bb4bbace94a1915173a |
 
 _Human approval is required before any deployment. SHA-256 detects corruption; it is not a signature and does not prove origin._

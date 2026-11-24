@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+const OUT=path.resolve('documents/html');
+const pages=fs.readdirSync(OUT).filter(f=>f.endsWith('.html'));
+test('docs site has landing, 14 doc pages and samples',()=>{assert.ok(pages.includes('index.html'));assert.ok(pages.length>=15);assert.ok(fs.existsSync(path.join(OUT,'samples/index.html')));});
+test('docs default to the light theme and ship a dark toggle',()=>{const h=fs.readFileSync(path.join(OUT,'index.html'),'utf8');assert.match(h,/<html lang="en" data-theme="light">/);assert.match(h,/id="theme-btn"/);assert.match(h,/name="viewport"/);});
+test('every internal link and asset in the docs resolves',()=>{const bad=[];for(const f of [...pages,'samples/index.html']){const dir=path.dirname(path.join(OUT,f));const h=fs.readFileSync(path.join(OUT,f),'utf8');for(const m of h.matchAll(/(?:href|src)="([^"#:]+)(?:#[^"]*)?"/g)){const t=m[1];if(/^(https?|mailto|data):/.test(t))continue;if(!fs.existsSync(path.resolve(dir,t)))bad.push(`${f} -> ${t}`);}}assert.deepEqual(bad,[]);});
+test('docs contain no unreplaced placeholders and no raw hostnames',()=>{for(const f of pages){const h=fs.readFileSync(path.join(OUT,f),'utf8');assert.ok(!/\{\{\w+\}\}/.test(h),f);}});

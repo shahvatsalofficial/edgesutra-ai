@@ -1,0 +1,13 @@
+{
+  "tool": "edgesutra-ai",
+  "version": "0.2.2",
+  "node": "v24.15.0",
+  "platform": "win32/x64",
+  "os": "10.0.26300",
+  "recordedAt": "2026-11-24T19:49:04.587Z",
+  "tests": 90,
+  "pass": 86,
+  "fail": 0,
+  "skipped": 4,
+  "exitCode": 0
+}

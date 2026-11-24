@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "toy-benchmark",
+  "status": "HOST_ONLY_TEST",
+  "recordedAt": "2026-11-24T19:48:47.496Z",
+  "host": {
+    "id": "host-a4e38df95a-win32-x64",
+    "platform": "win32",
+    "architecture": "x64",
+    "nodeVersion": "v24.15.0",
+    "logicalCores": 14
+  },
+  "targetDevice": {
+    "status": "NOT_TESTED",
+    "note": "This demo executes a tiny JavaScript model on the current host CPU, not an edge runtime or physical target device."
+  },
+  "runtime": "nodejs-toy-js",
+  "runs": 5,
+  "workload": {
+    "id": "edgesutra-toy-dense-v1",
+    "inputs": 16,
+    "iterationsPerRun": 60,
+    "inputDimension": 18,
+    "outputDimension": 10,
+    "inputHash": "98a4df16625d7c23dcc782c011f23e6c49e1f957adca8247dd09b6c22a328432",
+    "modelHash": "40d648f3d7d8744d5a6f37c60aca69493d49276b6e3f4ca4c9e155b87ce818df"
+  },
+  "baseline": {
+    "variant": "float32",
+    "timing": {
+      "wallClock": {
+        "unit": "ms",
+        "samples": [
+          2.114500000000021,
+          1.9986000000000104,
+          0.8699000000000012,
+          0.8007000000000062,
+          1.5241000000000042
+        ],
+        "mean": 1.4615600000000086,
+        "p50": 1.5241000000000042,
+        "p95": 2.0913200000000187,
+        "min": 0.8007000000000062,
+        "max": 2.114500000000021
+      },
+      "cpu": {
+        "unit": "process-cpu-ms",
+        "samples": [
+          32,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "memory": {
+        "unit": "process-rss-bytes-after-run",
+        "samples": [
+          58249216,
+          59142144,
+          59146240,
+          59158528,
+          59265024
+        ],
+        "notPeak": true
+      }
+    }
+  },
+  "candidate": {
+    "variant": "int8-sim",
+    "timing": {
+      "wallClock": {
+        "unit": "ms",
+        "samples": [
+          1.6972000000000094,
+          1.8333000000000084,
+          1.371200000000016,
+          1.0023999999999944,
+          0.8620999999999981
+        ],
+        "mean": 1.3532400000000053,
+        "p50": 1.371200000000016,
+        "p95": 1.8060800000000086,
+        "min": 0.8620999999999981,
+        "max": 1.8333000000000084
+      },
+      "cpu": {
+        "unit": "process-cpu-ms",
+        "samples": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "memory": {
+        "unit": "process-rss-bytes-after-run",
+        "samples": [
+          59559936,
+          59109376,
+          59109376,
+          59109376,
+          59109376
+        ],
+        "notPeak": true
+      }
+    }
+  },
+  "quality": {
+    "metric": "elementwise-absolute-error",
+    "reference": "toy float32",
+    "meanAbsoluteError": 0.0002388370821966391,
+    "maxAbsoluteError": 0.0017877120527362012,
+    "examplesBelowMeanError001": 16,
+    "totalExamples": 16
+  },
+  "measurements": {
+    "energyWh": {
+      "status": "NOT_MEASURED"
+    },
+    "carbonGrams": {
+      "status": "NOT_MEASURED"
+    },
+    "peakMemoryBytes": {
+      "status": "NOT_MEASURED"
+    },
+    "targetLatency": {
+      "status": "NOT_MEASURED"
+    }
+  },
+  "limitations": [
+    "Small synthetic dense layer, not ONNX/LiteRT/CoreML/ExecuTorch execution",
+    "Process RSS is after-run and not model-exclusive or peak usage",
+    "Wall-clock timings do not establish energy, speed on a target device or optimized performance"
+  ],
+  "integrity": "28b4bce6b03a2b1984b708309acffb0183fb749ae6ea8bb4bbace94a1915173a"
+}

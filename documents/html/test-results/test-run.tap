@@ -1,0 +1,550 @@
+TAP version 13
+# Subtest: version prints semver
+ok 1 - version prints semver
+  ---
+  duration_ms: 822.0349
+  type: 'test'
+  ...
+# Subtest: check exits 1 when incompatible
+ok 2 - check exits 1 when incompatible
+  ---
+  duration_ms: 841.4291
+  type: 'test'
+  ...
+# Subtest: audit writes JSON, Markdown, HTML and checksums
+ok 3 - audit writes JSON, Markdown, HTML and checksums
+  ---
+  duration_ms: 1687.5348
+  type: 'test'
+  ...
+# Subtest: audit never emits GO_CANDIDATE without device evidence
+ok 4 - audit never emits GO_CANDIDATE without device evidence
+  ---
+  duration_ms: 884.0801
+  type: 'test'
+  ...
+# Subtest: audit of unsupported model is BLOCKED with exit 1
+ok 5 - audit of unsupported model is BLOCKED with exit 1
+  ---
+  duration_ms: 803.7082
+  type: 'test'
+  ...
+# Subtest: audit with ONNX fixture records model SHA-256
+ok 6 - audit with ONNX fixture records model SHA-256
+  ---
+  duration_ms: 855.4513
+  type: 'test'
+  ...
+# Subtest: audit with missing input exits 2
+ok 7 - audit with missing input exits 2
+  ---
+  duration_ms: 841.8217
+  type: 'test'
+  ...
+# Subtest: HTML and Markdown audit reports escape hostile text
+ok 8 - HTML and Markdown audit reports escape hostile text
+  ---
+  duration_ms: 4.6561
+  type: 'test'
+  ...
+# Subtest: toy benchmark has real samples
+ok 9 - toy benchmark has real samples
+  ---
+  duration_ms: 2.5945
+  type: 'test'
+  ...
+# Subtest: toy benchmark has process cpu samples
+ok 10 - toy benchmark has process cpu samples
+  ---
+  duration_ms: 0.2665
+  type: 'test'
+  ...
+# Subtest: benchmark measures current host only
+ok 11 - benchmark measures current host only
+  ---
+  duration_ms: 0.1945
+  type: 'test'
+  ...
+# Subtest: benchmark is sealed with sha256
+ok 12 - benchmark is sealed with sha256
+  ---
+  duration_ms: 0.5149
+  type: 'test'
+  ...
+# Subtest: energy is not measured
+ok 13 - energy is not measured
+  ---
+  duration_ms: 0.2353
+  type: 'test'
+  ...
+# Subtest: carbon is not measured
+ok 14 - carbon is not measured
+  ---
+  duration_ms: 0.1873
+  type: 'test'
+  ...
+# Subtest: peak RSS is not fabricated
+ok 15 - peak RSS is not fabricated
+  ---
+  duration_ms: 0.1752
+  type: 'test'
+  ...
+# Subtest: all model output values finite
+ok 16 - all model output values finite
+  ---
+  duration_ms: 0.2871
+  type: 'test'
+  ...
+# Subtest: quantization produces int8-style integer weights
+ok 17 - quantization produces int8-style integer weights
+  ---
+  duration_ms: 0.4553
+  type: 'test'
+  ...
+# Subtest: different variants have distinct operator paths
+ok 18 - different variants have distinct operator paths
+  ---
+  duration_ms: 0.4919
+  type: 'test'
+  ...
+# Subtest: quality metrics separated from timing
+ok 19 - quality metrics separated from timing
+  ---
+  duration_ms: 0.1813
+  type: 'test'
+  ...
+# Subtest: benchmark input hash is deterministic
+ok 20 - benchmark input hash is deterministic
+  ---
+  duration_ms: 5.2761
+  type: 'test'
+  ...
+# Subtest: comparison detects identical workloads
+ok 21 - comparison detects identical workloads
+  ---
+  duration_ms: 0.5441
+  type: 'test'
+  ...
+# Subtest: comparison rejects mismatched workload
+ok 22 - comparison rejects mismatched workload
+  ---
+  duration_ms: 0.4538
+  type: 'test'
+  ...
+# Subtest: comparison rejects mismatched host
+ok 23 - comparison rejects mismatched host
+  ---
+  duration_ms: 0.3402
+  type: 'test'
+  ...
+# Subtest: comparison rejects unrelated document kinds
+ok 24 - comparison rejects unrelated document kinds
+  ---
+  duration_ms: 0.7982
+  type: 'test'
+  ...
+# Subtest: runs below minimum rejected
+ok 25 - runs below minimum rejected
+  ---
+  duration_ms: 0.2134
+  type: 'test'
+  ...
+# Subtest: iterations above max rejected
+ok 26 - iterations above max rejected
+  ---
+  duration_ms: 0.2199
+  type: 'test'
+  ...
+# Subtest: input count below minimum rejected
+ok 27 - input count below minimum rejected
+  ---
+  duration_ms: 0.2024
+  type: 'test'
+  ...
+# Subtest: doctor works offline
+ok 28 - doctor works offline
+  ---
+  duration_ms: 825.3305
+  type: 'test'
+  ...
+# Subtest: profile command returns host profile
+ok 29 - profile command returns host profile
+  ---
+  duration_ms: 761.3097
+  type: 'test'
+  ...
+# Subtest: validation CLI returns measured-static verdict
+ok 30 - validation CLI returns measured-static verdict
+  ---
+  duration_ms: 810.5702
+  type: 'test'
+  ...
+# Subtest: invalid required flag exits with error
+ok 31 - invalid required flag exits with error
+  ---
+  duration_ms: 790.5229
+  type: 'test'
+  ...
+# Subtest: invalid option syntax exits with error
+ok 32 - invalid option syntax exits with error
+  ---
+  duration_ms: 790.3444
+  type: 'test'
+  ...
+# Subtest: unknown command exits nonzero
+ok 33 - unknown command exits nonzero
+  ---
+  duration_ms: 836.752
+  type: 'test'
+  ...
+# Subtest: plan command does not claim conversion
+ok 34 - plan command does not claim conversion
+  ---
+  duration_ms: 801.6433
+  type: 'test'
+  ...
+# Subtest: benchmark command measures live toy execution
+ok 35 - benchmark command measures live toy execution
+  ---
+  duration_ms: 855.7776
+  type: 'test'
+  ...
+# Subtest: verify CLI flags tampered report
+ok 36 - verify CLI flags tampered report
+  ---
+  duration_ms: 820.3539
+  type: 'test'
+  ...
+# Subtest: render refuses invalid report hash
+ok 37 - render refuses invalid report hash
+  ---
+  duration_ms: 812.5609
+  type: 'test'
+  ...
+# Subtest: profile has live cpu and memory metadata
+ok 38 - profile has live cpu and memory metadata
+  ---
+  duration_ms: 4.4521
+  type: 'test'
+  ...
+# Subtest: profile does not claim NPU capabilities
+ok 39 - profile does not claim NPU capabilities
+  ---
+  duration_ms: 3.0279
+  type: 'test'
+  ...
+# Subtest: compatible manifests yield only a static compatibility claim
+ok 40 - compatible manifests yield only a static compatibility claim
+  ---
+  duration_ms: 1.6802
+  type: 'test'
+  ...
+# Subtest: operator absence blocks compatibility
+ok 41 - operator absence blocks compatibility
+  ---
+  duration_ms: 1.2536
+  type: 'test'
+  ...
+# Subtest: runtime format mismatch is a fail
+ok 42 - runtime format mismatch is a fail
+  ---
+  duration_ms: 0.4557
+  type: 'test'
+  ...
+# Subtest: precision not available blocks
+ok 43 - precision not available blocks
+  ---
+  duration_ms: 0.2524
+  type: 'test'
+  ...
+# Subtest: model memory exceeding target budget blocks
+ok 44 - model memory exceeding target budget blocks
+  ---
+  duration_ms: 0.3551
+  type: 'test'
+  ...
+# Subtest: no declared required memory is not a pass
+ok 45 - no declared required memory is not a pass
+  ---
+  duration_ms: 0.4193
+  type: 'test'
+  ...
+# Subtest: no installed runtime is unverified
+ok 46 - no installed runtime is unverified
+  ---
+  duration_ms: 0.3933
+  type: 'test'
+  ...
+# Subtest: unknown OS is unverified
+ok 47 - unknown OS is unverified
+  ---
+  duration_ms: 0.3943
+  type: 'test'
+  ...
+# Subtest: missing model id rejected
+ok 48 - missing model id rejected
+  ---
+  duration_ms: 0.7043
+  type: 'test'
+  ...
+# Subtest: bad device memory rejected
+ok 49 - bad device memory rejected
+  ---
+  duration_ms: 0.2709
+  type: 'test'
+  ...
+# Subtest: missing runtime operator list rejected
+ok 50 - missing runtime operator list rejected
+  ---
+  duration_ms: 0.2353
+  type: 'test'
+  ...
+# Subtest: plan is non-executing
+ok 51 - plan is non-executing
+  ---
+  duration_ms: 1.2242
+  type: 'test'
+  ...
+# Subtest: plan includes source and target hashes
+ok 52 - plan includes source and target hashes
+  ---
+  duration_ms: 1.2958
+  type: 'test'
+  ...
+# Subtest: plan rejects unsupported precision
+ok 53 - plan rejects unsupported precision
+  ---
+  duration_ms: 0.3742
+  type: 'test'
+  ...
+# Subtest: ONNX fixture is correctly unsupported
+ok 54 - ONNX fixture is correctly unsupported
+  ---
+  duration_ms: 0.924
+  type: 'test'
+  ...
+# Subtest: JSON fixture is real data on disk
+ok 55 - JSON fixture is real data on disk
+  ---
+  duration_ms: 0.5997
+  type: 'test'
+  ...
+# Subtest: docs site has landing, 14 doc pages and samples
+ok 56 - docs site has landing, 14 doc pages and samples
+  ---
+  duration_ms: 1.9389
+  type: 'test'
+  ...
+# Subtest: docs default to the light theme and ship a dark toggle
+ok 57 - docs default to the light theme and ship a dark toggle
+  ---
+  duration_ms: 3.0252
+  type: 'test'
+  ...
+# Subtest: every internal link and asset in the docs resolves
+ok 58 - every internal link and asset in the docs resolves
+  ---
+  duration_ms: 62.3547
+  type: 'test'
+  ...
+# Subtest: docs contain no unreplaced placeholders and no raw hostnames
+ok 59 - docs contain no unreplaced placeholders and no raw hostnames
+  ---
+  duration_ms: 4.1178
+  type: 'test'
+  ...
+# Subtest: tiny model metadata extraction has two known operators
+ok 60 - tiny model metadata extraction has two known operators
+  ---
+  duration_ms: 16.7546
+  type: 'test'
+  ...
+# Subtest: ONNX inspection includes verified SHA hash
+ok 61 - ONNX inspection includes verified SHA hash
+  ---
+  duration_ms: 2.3428
+  type: 'test'
+  ...
+# Subtest: unsupported operator is actually read from protobuf metadata
+ok 62 - unsupported operator is actually read from protobuf metadata
+  ---
+  duration_ms: 3.4134
+  type: 'test'
+  ...
+# Subtest: truncated ONNX bytes rejected
+ok 63 - truncated ONNX bytes rejected
+  ---
+  duration_ms: 1.1969
+  type: 'test'
+  ...
+# Subtest: ONNX missing graph rejected
+ok 64 - ONNX missing graph rejected
+  ---
+  duration_ms: 0.5198
+  type: 'test'
+  ...
+# Subtest: ONNX malformed wire type rejected
+ok 65 - ONNX malformed wire type rejected
+  ---
+  duration_ms: 0.3783
+  type: 'test'
+  ...
+# Subtest: missing operator name rejected
+ok 66 - missing operator name rejected
+  ---
+  duration_ms: 0.5083
+  type: 'test'
+  ...
+# Subtest: giant protobuf byte payload rejected without processing
+ok 67 - giant protobuf byte payload rejected without processing
+  ---
+  duration_ms: 0.2202
+  type: 'test'
+  ...
+# Subtest: ONNX file symlinks rejected
+ok 68 - ONNX file symlinks rejected # SKIP symlink creation not permitted here (EPERM)
+  ---
+  duration_ms: 4.4699
+  type: 'test'
+  ...
+# Subtest: inspected real ONNX metadata never yields a claim of verified inference
+ok 69 - inspected real ONNX metadata never yields a claim of verified inference
+  ---
+  duration_ms: 6.2992
+  type: 'test'
+  ...
+# Subtest: static compatibility fails for ONNX custom op not listed in runtime
+ok 70 - static compatibility fails for ONNX custom op not listed in runtime
+  ---
+  duration_ms: 3.1053
+  type: 'test'
+  ...
+# Subtest: inspect CLI emits json evidence
+ok 71 - inspect CLI emits json evidence
+  ---
+  duration_ms: 871.1017
+  type: 'test'
+  ...
+# Subtest: invalid UTF-8 in operator name is a clean Error, not a TypeError
+ok 72 - invalid UTF-8 in operator name is a clean Error, not a TypeError
+  ---
+  duration_ms: 0.6461
+  type: 'test'
+  ...
+# Subtest: mutation fuzz (500 cases) never throws a non-Error
+ok 73 - mutation fuzz (500 cases) never throws a non-Error
+  ---
+  duration_ms: 21.0009
+  type: 'test'
+  ...
+# Subtest: tampered report is rejected
+ok 74 - tampered report is rejected
+  ---
+  duration_ms: 3.237
+  type: 'test'
+  ...
+# Subtest: missing integrity rejected
+ok 75 - missing integrity rejected
+  ---
+  duration_ms: 0.283
+  type: 'test'
+  ...
+# Subtest: readJson rejects symlink
+ok 76 - readJson rejects symlink # SKIP symlink creation not permitted here (EPERM)
+  ---
+  duration_ms: 8.4791
+  type: 'test'
+  ...
+# Subtest: readJson rejects invalid content
+ok 77 - readJson rejects invalid content
+  ---
+  duration_ms: 5.4532
+  type: 'test'
+  ...
+# Subtest: readJson rejects oversized file
+ok 78 - readJson rejects oversized file
+  ---
+  duration_ms: 5.865
+  type: 'test'
+  ...
+# Subtest: writeJson creates parseable JSON file
+ok 79 - writeJson creates parseable JSON file
+  ---
+  duration_ms: 6.5865
+  type: 'test'
+  ...
+# Subtest: HTML escapes external content
+ok 80 - HTML escapes external content
+  ---
+  duration_ms: 1.1951
+  type: 'test'
+  ...
+# Subtest: Markdown reports valid evidence integrity
+ok 81 - Markdown reports valid evidence integrity
+  ---
+  duration_ms: 0.5752
+  type: 'test'
+  ...
+# Subtest: skill manifest exists
+ok 82 - skill manifest exists
+  ---
+  duration_ms: 0.4412
+  type: 'test'
+  ...
+# Subtest: installer supports 7 explicitly scoped IDEs
+ok 83 - installer supports 7 explicitly scoped IDEs
+  ---
+  duration_ms: 1419.6172
+  type: 'test'
+  ...
+# Subtest: installer refuses overwrite
+ok 84 - installer refuses overwrite
+  ---
+  duration_ms: 191.6929
+  type: 'test'
+  ...
+# Subtest: installer rejects unknown IDE
+ok 85 - installer rejects unknown IDE
+  ---
+  duration_ms: 3.4332
+  type: 'test'
+  ...
+# Subtest: installer rejects symlinked target parent
+ok 86 - installer rejects symlinked target parent # SKIP symlink creation not permitted here (EPERM)
+  ---
+  duration_ms: 2.7675
+  type: 'test'
+  ...
+# Subtest: server requires strong token
+ok 87 - server requires strong token
+  ---
+  duration_ms: 2.1362
+  type: 'test'
+  ...
+# Subtest: server health is public but reports require token
+ok 88 - server health is public but reports require token
+  ---
+  duration_ms: 113.8123
+  type: 'test'
+  ...
+# Subtest: server rejects traversal and POST
+ok 89 - server rejects traversal and POST
+  ---
+  duration_ms: 27.9198
+  type: 'test'
+  ...
+# Subtest: server refuses symlink reports
+ok 90 - server refuses symlink reports # SKIP symlink creation not permitted here (EPERM)
+  ---
+  duration_ms: 14.7131
+  type: 'test'
+  ...
+1..90
+# tests 90
+# suites 0
+# pass 86
+# fail 0
+# cancelled 0
+# skipped 4
+# todo 0
+# duration_ms 9882.5311

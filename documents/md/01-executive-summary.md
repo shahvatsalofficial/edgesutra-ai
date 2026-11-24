@@ -14,8 +14,14 @@ Teams routinely ship quantized models on the strength of a file size, a vendor d
 | Host-only benchmark with guardrails | Real timings, labelled as host-only; never passed off as device latency |
 | 20 portable agent skills | The same review discipline inside Claude Code, Cursor, Codex, Copilot, Gemini CLI |
 
+@@diagram:pipeline@@
+
 ## What it deliberately does not do
 It is not an inference engine and does not run models on devices yet. It never invents energy, carbon, memory-peak or device-latency figures. It cannot output "ready to ship": the best verdict is `REVIEW_REQUIRED` until on-device evidence and a human sign-off exist.
+
+## How the evidence is organised
+
+@@html:tiers@@
 
 ## Why trust it
 - Zero runtime dependencies, no network access, no telemetry.

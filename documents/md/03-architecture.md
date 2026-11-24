@@ -8,6 +8,11 @@
 ```
 
 ## Layers
+
+@@html:layers@@
+
+The same layers, in detail:
+
 | Layer | Path | Responsibility | Depends on |
 |---|---|---|---|
 | CLI | `packages/cli/index.mjs` | Strict argument parsing, exit codes, file I/O | core, reporting, server |
@@ -24,6 +29,10 @@
 4. **One block model for MD and HTML.** Prevents the two formats drifting apart.
 5. **Static manifests are declarations.** They are labelled `STATIC_MATCH`, never "compatible with device".
 6. **Adapters later.** Real runtimes (ONNX Runtime, LiteRT, ExecuTorch, llama.cpp) arrive as optional, version-pinned, sandboxed adapters.
+
+## How an artifact is sealed
+
+@@diagram:evidence@@
 
 ## Data contracts
 All artifacts carry `schemaVersion: 1`, `kind`, and `integrity` (SHA-256 over the canonical JSON of the rest). JSON schemas live in `schemas/`.

@@ -20,6 +20,9 @@ npx edgesutra-ai audit --out ./edge-audit --onnx ./model.onnx
 ```
 
 ## 4. Read the report
+
+@@diagram:pipeline@@
+
 | Section | How to use it |
 |---|---|
 | Verdict | `BLOCKED` = stop; `REVIEW_REQUIRED` = continue, but a human must collect on-device evidence |
@@ -29,6 +32,9 @@ npx edgesutra-ai audit --out ./edge-audit --onnx ./model.onnx
 | Artifact hashes | Compare with `SHA256SUMS.txt` to prove the files were not altered |
 
 ## 5. Use in CI
+
+@@diagram:ci@@
+
 ```yaml
 - run: npx edgesutra-ai audit --out audit --model m.json --device d.json --runtime r.json
 - uses: actions/upload-artifact@v4
@@ -47,7 +53,11 @@ npx edgesutra-ai install --ide claude --project .
 ```
 The command never overwrites. Then ask your agent: "use EdgeSutra Prime to review this model's edge readiness". Skill discovery depends on your IDE; it is not guaranteed by file copy alone.
 
-## 8. Common questions
+## 8. See it on real situations
+
+Seven worked examples with real output are in [Real-world scenarios](14-real-world-scenarios.html).
+
+## 9. Common questions
 - *Why REVIEW_REQUIRED and never "OK"?* Nothing here executes on your device.
 - *Can I trust the benchmark numbers?* They are real timings of a toy model on this host, useful for instrumentation, not for device decisions.
 - *Does it upload anything?* No.

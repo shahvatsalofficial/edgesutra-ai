@@ -1,6 +1,11 @@
 # Evidence model and rules
 
 ## Evidence tiers
+
+@@html:tiers@@
+
+The same tiers in a table:
+
 | Tier | Meaning | Produced today? |
 |---|---|---|
 | `MEASURED_ON_DEVICE` | Executed on a named target with logs and samples | No |
@@ -9,6 +14,16 @@
 | `STATIC_MATCH` | Declared manifests agree | Yes |
 | `MODELED_ESTIMATE` | From explicit assumptions and formulas | No |
 | `NOT_RUN` / `UNKNOWN` / `BLOCKED` / `FAILED` / `HUMAN_REVIEW_REQUIRED` | Honest absence or stop states | Yes |
+
+## What it says and never says
+
+@@html:claims@@
+
+## Verdicts
+
+@@html:verdicts@@
+
+@@diagram:decision@@
 
 ## Language rules
 1. Never write "runs on", "supported on" or "optimized for" a device without `MEASURED_ON_DEVICE`.
